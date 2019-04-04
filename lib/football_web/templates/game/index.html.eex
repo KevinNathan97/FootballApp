@@ -1,0 +1,32 @@
+<h1>Listing Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team1</th>
+      <th>Team2</th>
+      <th>Team1 name</th>
+      <th>Team2 name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for game <- @games do %>
+    <tr>
+      <td><%= game.team1 %></td>
+      <td><%= game.team2 %></td>
+      <td><%= game.team1_name %></td>
+      <td><%= game.team2_name %></td>
+
+      <td>
+        <%= link "Show", to: Routes.game_path(@conn, :show, game) %>
+        <%= link "Edit", to: Routes.game_path(@conn, :edit, game) %>
+        <%= link "Delete", to: Routes.game_path(@conn, :delete, game), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Game", to: Routes.game_path(@conn, :new) %></span>

@@ -1,0 +1,43 @@
+<h1>Show Team  stats</h1>
+
+<ul>
+
+  <li>
+    <strong>Team:</strong>
+    <%= @team__stats.team_id %>
+  </li>
+
+  <li>
+    <strong>Games played:</strong>
+    <%= @team__stats.games_played %>
+  </li>
+
+  <li>
+    <strong>Games won:</strong>
+    <%= @team__stats.games_won %>
+  </li>
+
+  <li>
+    <strong>Games draw:</strong>
+    <%= @team__stats.games_draw %>
+  </li>
+
+  <li>
+    <strong>Games lost:</strong>
+    <%= @team__stats.games_lost %>
+  </li>
+
+  <li>
+    <strong>Goal difference:</strong>
+    <%= @team__stats.goal_difference %>
+  </li>
+
+  <li>
+    <strong>Points:</strong>
+    <%= @team__stats.points %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.team__stats_path(@conn, :edit, @team__stats) %></span>
+<span><%= link "Back", to: Routes.team__stats_path(@conn, :index) %></span>

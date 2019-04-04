@@ -17,6 +17,9 @@ defmodule FootballWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/teams", TeamController
+    resources "/games", GameController
+    resources "/team_stats", Team_StatsController
   end
 
   # Other scopes may use custom stacks.

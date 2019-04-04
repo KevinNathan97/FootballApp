@@ -1,0 +1,28 @@
+<h1>Show Game</h1>
+
+<ul>
+
+  <li>
+    <strong>Team1:</strong>
+    <%= @game.team1 %>
+  </li>
+
+  <li>
+    <strong>Team2:</strong>
+    <%= @game.team2 %>
+  </li>
+
+  <li>
+    <strong>Team1 name:</strong>
+    <%= @game.team1_name %>
+  </li>
+
+  <li>
+    <strong>Team2 name:</strong>
+    <%= @game.team2_name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.game_path(@conn, :edit, @game) %></span>
+<span><%= link "Back", to: Routes.game_path(@conn, :index) %></span>

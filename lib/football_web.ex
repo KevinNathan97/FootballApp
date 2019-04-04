@@ -24,6 +24,11 @@ defmodule FootballWeb do
       import Plug.Conn
       import FootballWeb.Gettext
       alias FootballWeb.Router.Helpers, as: Routes
+
+      alias Football.Repo
+      alias Ecto.Query
+      alias Football.General
+      alias Football.General.{Team, Game}
     end
   end
 

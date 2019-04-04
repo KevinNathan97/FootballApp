@@ -1,0 +1,5 @@
+<h1>New Team  stats</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.team__stats_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.team__stats_path(@conn, :index) %></span>
